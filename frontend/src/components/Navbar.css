@@ -1,0 +1,172 @@
+/* EDITORIAL NAVBAR */
+.navbar {
+    background: rgba(8, 8, 8, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0;
+}
+
+.navbar .container {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+/* BRAND */
+.navbar-brand {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.brand-text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #fff;
+    letter-spacing: -0.05em;
+}
+
+.brand-text::after {
+    content: '.';
+    color: var(--accent-sage);
+}
+
+/* LINKS */
+.navbar-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    font-family: 'Space Grotesk', monospace;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #888;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #fff;
+}
+
+.nav-link.active {
+    border-bottom: 1px solid var(--accent-sage);
+    padding-bottom: 4px;
+}
+
+.nav-link-admin {
+    color: var(--accent-sage);
+}
+
+/* USER MENU */
+.user-info {
+    border: 1px solid #333;
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    display: flex;
+    gap: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: #000;
+}
+
+.user-info:hover {
+    border-color: var(--accent-sage);
+}
+
+.user-name {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.user-role {
+    font-family: 'Space Grotesk', monospace;
+    font-size: 0.7rem;
+    color: #666;
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+/* DROPDOWN OVERLAY */
+.user-info-overlay {
+    position: absolute;
+    top: 90px;
+    right: 2rem;
+    width: 300px;
+    background: #111;
+    border: 1px solid #333;
+    padding: 1.5rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    z-index: 1100;
+}
+
+.overlay-header {
+    border-bottom: 1px solid #333;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.overlay-header h4 {
+    font-family: 'Space Grotesk', monospace;
+    color: #888;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.overlay-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+
+.overlay-label {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.overlay-value {
+    color: #fff;
+    font-family: 'Manrope', sans-serif;
+}
+
+.btn-logout {
+    width: 100%;
+    background: #222;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    font-family: 'Space Grotesk', monospace;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.btn-logout:hover {
+    background: #333;
+}
+
+@media (max-width: 900px) {
+    .navbar-links {
+        display: none;
+    }
+
+    /* Mobile Menu would need extra logic, hiding for simplicity in prompt */
+}

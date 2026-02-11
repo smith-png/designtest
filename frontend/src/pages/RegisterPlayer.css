@@ -1,0 +1,130 @@
+/* REGISTER PLAYER PAGE - EDITORIAL DARK */
+.register-page {
+    min-height: 100vh;
+    background: var(--bg-dark);
+    display: flex;
+    justify-content: center;
+    padding: 4rem 2rem;
+    color: #fff;
+}
+
+.register-container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.register-header {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #222;
+    padding-bottom: 2rem;
+}
+
+.meta-tag {
+    font-family: 'Space Grotesk', monospace;
+    font-size: 0.8rem;
+    color: var(--accent-sage);
+    letter-spacing: 0.2em;
+}
+
+.page-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 3.5rem;
+    line-height: 0.9;
+    margin-top: 0.5rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* ERROR BANNER */
+.error-banner {
+    background: rgba(255, 51, 51, 0.1);
+    border: 1px solid #FF3333;
+    color: #FF3333;
+    padding: 1rem;
+    font-family: 'Space Grotesk', monospace;
+    margin-bottom: 2rem;
+}
+
+/* FORM */
+.editorial-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.form-group label {
+    font-family: 'Space Grotesk', monospace;
+    font-size: 0.7rem;
+    color: #666;
+    letter-spacing: 0.1em;
+}
+
+.editorial-input,
+.editorial-select {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 1rem 0;
+    color: #fff;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.2rem;
+    border-radius: 0;
+    transition: border-color 0.3s;
+}
+
+.editorial-input:focus,
+.editorial-select:focus {
+    outline: none;
+    border-bottom-color: var(--accent-sage);
+}
+
+.input-hint {
+    font-size: 0.7rem;
+    color: #444;
+    font-family: 'Space Grotesk', monospace;
+    margin-top: 0.5rem;
+}
+
+.submit-btn {
+    margin-top: 2rem;
+    background: var(--accent-sage);
+    color: #000;
+    border: none;
+    padding: 1.5rem;
+    font-family: 'Space Grotesk', monospace;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: transform 0.2s;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}

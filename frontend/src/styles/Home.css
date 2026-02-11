@@ -1,0 +1,217 @@
+/* EDITORIAL HOME */
+.editorial-home {
+    background-color: var(--bg-dark);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* HERO SECTION */
+.editorial-hero {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 0 5vw;
+    background: radial-gradient(circle at 80% 20%, #1a1a1a 0%, var(--bg-dark) 50%);
+}
+
+.hero-meta {
+    font-family: 'Space Grotesk', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    color: var(--accent-sage);
+    margin-bottom: 2rem;
+}
+
+.hero-display {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 8rem;
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+    margin-bottom: 2rem;
+}
+
+.text-outline {
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
+}
+
+.hero-desc {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.5rem;
+    max-width: 600px;
+    color: #888;
+    margin-bottom: 3rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btn-sage {
+    background: var(--accent-sage);
+    color: #000;
+    padding: 1rem 2rem;
+    font-family: 'Space Grotesk', monospace;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.btn-outline {
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-family: 'Space Grotesk', monospace;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-sage:hover,
+.btn-outline:hover {
+    transform: translateY(-2px);
+}
+
+.btn-outline:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* TICKER */
+.hero-ticker {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #000;
+    border-top: 1px solid #333;
+    padding: 1rem 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.ticker-content {
+    display: inline-block;
+    animation: scroll 20s linear infinite;
+    font-family: 'Space Grotesk', monospace;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.ticker-content span {
+    margin-right: 4rem;
+}
+
+/* SPORTS COLUMNS */
+.sports-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 80vh;
+}
+
+.sport-col {
+    position: relative;
+    border-right: 1px solid var(--border-dim);
+    display: flex;
+    align-items: flex-end;
+    padding: 3rem;
+    text-decoration: none;
+    transition: flex 0.5s ease;
+    background-size: cover;
+    background-position: center;
+    /* Use B&W placeholders from Unsplash */
+    filter: grayscale(100%);
+}
+
+.cricket-col {
+    background-image: url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=2067&auto=format&fit=crop');
+}
+
+.futsal-col {
+    background-image: url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=1935&auto=format&fit=crop');
+}
+
+.volleyball-col {
+    background-image: url('https://images.unsplash.com/photo-1592656094267-764a45160876?q=80&w=2070&auto=format&fit=crop');
+}
+
+.col-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    transition: background 0.3s;
+}
+
+.col-content {
+    position: relative;
+    z-index: 2;
+}
+
+.col-number {
+    display: block;
+    font-family: 'Space Grotesk', monospace;
+    font-size: 1rem;
+    color: var(--accent-sage);
+    margin-bottom: 1rem;
+}
+
+.col-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 3rem;
+    color: #fff;
+    margin: 0;
+}
+
+.col-link {
+    display: block;
+    margin-top: 1rem;
+    font-family: 'Space Grotesk', monospace;
+    font-size: 0.8rem;
+    color: transparent;
+    transition: color 0.3s;
+}
+
+/* HOVER EFFECTS */
+.sport-col:hover {
+    filter: grayscale(0%);
+    flex: 1.2;
+    /* Expand width */
+}
+
+.sport-col:hover .col-overlay {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.sport-col:hover .col-link {
+    color: var(--accent-sage);
+}
+
+@media (max-width: 900px) {
+    .editorial-hero {
+        padding-top: 4rem;
+        height: auto;
+        padding-bottom: 4rem;
+    }
+
+    .hero-display {
+        font-size: 4rem;
+    }
+
+    .sports-columns {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .sport-col {
+        height: 300px;
+        border-right: none;
+        border-bottom: 1px solid #333;
+    }
+}

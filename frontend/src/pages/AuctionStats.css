@@ -1,0 +1,306 @@
+/* CONTAINER */
+.stats-page {
+    min-height: 100vh;
+    background-color: var(--bg-dark);
+    padding: 3rem 5vw;
+    color: #fff;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.stats-loading {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-family: 'Space Grotesk', monospace;
+}
+
+/* HEADER WITH ACTIONS */
+.stats-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #222;
+    padding-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.meta-tag {
+    font-family: 'Space Grotesk', monospace;
+    font-size: 0.8rem;
+    color: var(--accent-sage);
+    letter-spacing: 0.2em;
+    margin-bottom: 0.5rem;
+}
+
+.page-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 3.5rem;
+    line-height: 1;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.header-actions {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+/* FILTER BUTTONS */
+.sport-filter-group {
+    display: flex;
+    gap: 0.5rem;
+    background: #111;
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px solid #333;
+}
+
+.filter-btn {
+    background: transparent;
+    border: none;
+    color: #666;
+    font-family: 'Space Grotesk', monospace;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.8rem;
+}
+
+.filter-btn:hover {
+    color: #fff;
+}
+
+.filter-btn.active {
+    background: #333;
+    color: #fff;
+    font-weight: 700;
+}
+
+.sidebar-toggle {
+    background: var(--accent-sage);
+    color: #000;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-family: 'Space Grotesk', monospace;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* TABLE STYLES */
+.ledger-container {
+    width: 100%;
+}
+
+.ledger-title {
+    font-family: 'Space Grotesk', monospace;
+    color: #666;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1em;
+    font-size: 0.9rem;
+}
+
+.editorial-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.editorial-table th {
+    text-align: left;
+    padding: 1rem;
+    border-bottom: 1px solid #333;
+    color: #666;
+    font-family: 'Space Grotesk', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+}
+
+.editorial-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #222;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.editorial-table .mono {
+    font-family: 'Space Grotesk', monospace;
+    font-size: 0.9rem;
+}
+
+.editorial-table .bold {
+    color: #fff;
+    font-weight: 700;
+}
+
+.editorial-table .highlight {
+    color: var(--accent-sage);
+}
+
+.empty-cell {
+    text-align: center;
+    color: #444;
+    padding: 3rem;
+    font-style: italic;
+}
+
+.btn-release {
+    background: transparent;
+    border: 1px solid #FF3333;
+    color: #FF3333;
+    padding: 0.5rem 1rem;
+    font-family: 'Space Grotesk', monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-release:hover {
+    background: #FF3333;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(255, 51, 51, 0.4);
+}
+
+/* SIDEBAR (DRAWER) */
+.stats-sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    backdrop-filter: blur(2px);
+}
+
+.stats-sidebar-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.stats-sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100%;
+    background: #0f0f0f;
+    border-left: 1px solid #333;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.stats-sidebar-overlay.open .stats-sidebar {
+    transform: translateX(0);
+}
+
+.sidebar-header {
+    padding: 2rem;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.close-btn {
+    background: transparent;
+    border: none;
+    color: #666;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.sidebar-content {
+    padding: 2rem;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.sidebar-team-card {
+    background: #000;
+    border: 1px solid #222;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+
+.sidebar-team-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #222;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-team-name {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    color: #fff;
+}
+
+.sidebar-team-budget {
+    font-family: 'Space Grotesk', monospace;
+    color: var(--accent-sage);
+    font-size: 0.8rem;
+}
+
+.sidebar-roster-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sidebar-player-row {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Space Grotesk', monospace;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.sidebar-price {
+    color: #555;
+}
+
+.empty-roster {
+    font-size: 0.7rem;
+    color: #444;
+    font-style: italic;
+}
+
+@media (max-width: 900px) {
+    .stats-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .header-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .stats-sidebar {
+        width: 100%;
+    }
+}

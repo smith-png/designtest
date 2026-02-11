@@ -1,0 +1,179 @@
+/* ADMIN DASHBOARD - EDITORIAL DARK */
+.admin-page {
+    min-height: 100vh;
+    background: var(--bg-dark);
+    padding: 3rem 5vw;
+    color: #fff;
+}
+
+/* HEADER */
+.admin-header {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #222;
+    padding-bottom: 1.5rem;
+}
+
+.meta-tag {
+    color: var(--accent-sage);
+    font-family: 'Space Grotesk', monospace;
+    letter-spacing: 0.2em;
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.page-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 3rem;
+    margin: 0;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* TABS */
+.admin-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #222;
+}
+
+.admin-tab-btn {
+    background: transparent;
+    border: none;
+    color: #666;
+    font-family: 'Space Grotesk', monospace;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-bottom: 2px solid transparent;
+}
+
+.admin-tab-btn:hover {
+    color: #fff;
+}
+
+.admin-tab-btn.active {
+    color: var(--accent-sage);
+    border-bottom-color: var(--accent-sage);
+}
+
+/* KPI GRID */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.kpi-card {
+    background: #111;
+    padding: 2rem;
+    border: 1px solid #333;
+}
+
+.kpi-label {
+    display: block;
+    color: #666;
+    font-family: 'Space Grotesk', monospace;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.kpi-value {
+    font-family: 'Manrope', sans-serif;
+    font-size: 3rem;
+    color: #fff;
+}
+
+.kpi-value.highlight {
+    color: var(--accent-sage);
+}
+
+/* TABLES */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.editorial-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.editorial-table th {
+    color: #666;
+    padding: 1rem;
+    border-bottom: 1px solid #333;
+    font-family: 'Space Grotesk', monospace;
+    font-size: 0.8rem;
+}
+
+.editorial-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #222;
+    font-family: 'Manrope', sans-serif;
+}
+
+.editorial-table .bold {
+    font-weight: 700;
+    color: #fff;
+}
+
+/* BADGES & ACTIONS */
+.status-badge {
+    padding: 4px 8px;
+    font-size: 0.7rem;
+    font-family: 'Space Grotesk', monospace;
+    text-transform: uppercase;
+    border: 1px solid #333;
+    display: inline-block;
+}
+
+.status-badge.pending {
+    color: #ffcc00;
+    border-color: #ffcc00;
+}
+
+.status-badge.approved {
+    color: var(--accent-sage);
+    border-color: var(--accent-sage);
+}
+
+.status-badge.sold {
+    color: #fff;
+    border-color: #fff;
+}
+
+.action-btn {
+    background: transparent;
+    border: 1px solid #666;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-family: 'Space Grotesk', monospace;
+    font-size: 0.7rem;
+    margin-right: 0.5rem;
+    transition: all 0.2s;
+}
+
+.action-btn.approve {
+    border-color: var(--accent-sage);
+    color: var(--accent-sage);
+}
+
+.action-btn.approve:hover {
+    background: var(--accent-sage);
+    color: #000;
+}
+
+.action-btn.delete {
+    border-color: #FF3333;
+    color: #FF3333;
+}
+
+.action-btn.delete:hover {
+    background: #FF3333;
+    color: #fff;
+}
